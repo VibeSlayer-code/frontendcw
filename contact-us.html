@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Obliq - Contact Us</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Inter", sans-serif;
+      }
+
+      body {
+        background: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-x: hidden;
+      }
+
+      nav {
+        width: 92%;
+        max-width: 1280px;
+        background-color: #ffffff;
+        border-radius: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 25px 50px;
+        margin-top: 25px;
+      }
+
+      .logo img {
+        width: 90px;
+        height: auto;
+        display: block;
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 55px;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: #000000;
+        font-size: 24.68px;
+        font-weight: 500;
+        transition: color 0.2s ease;
+      }
+
+      .nav-links a.active {
+        color: #6c63ff;
+        font-weight: 600;
+      }
+
+      .nav-links a:hover {
+        color: #6c63ff;
+      }
+
+      .contact-btn {
+        background: #d9d9d9;
+        border: none;
+        cursor: pointer;
+        border-radius: 22px;
+        padding: 10px 28px;
+        font-size: 20px;
+        font-weight: 500;
+        color: #000000;
+        transition: background 0.2s ease;
+      }
+
+      .contact-btn:hover,
+      .contact-btn.active {
+        background-color: #bfbfbf;
+      }
+
+      .contact-section {
+        width: 1332px;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        margin-top: 40px;
+        background: #ffffff;
+        height: auto;
+        min-height: 650px;
+      }
+
+      .contact-form {
+        background: #e5e5e5;
+        border-radius: 24px;
+        padding: 60px 80px;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 100%;
+      }
+
+      .contact-form h3 {
+        font-size: 20px;
+        font-weight: 600;
+        background: linear-gradient(90deg, #635bff, #6c63ff);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -ms-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 14px;
+      }
+
+      .contact-form h1 {
+        font-size: 48px;
+        font-weight: 700;
+        color: #000000;
+        line-height: 1.2;
+        margin-bottom: 22px;
+      }
+
+      .contact-form p {
+        font-size: 18px;
+        color: #555;
+        margin-bottom: 20px;
+      }
+
+      .divider {
+        width: 100%;
+        height: 1px;
+        background-color: #bfbfbf;
+        margin-bottom: 24px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+      }
+
+      .input-group {
+        display: flex;
+        gap: 20px;
+      }
+
+      .field {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      label {
+        font-size: 14px;
+        font-weight: 600;
+        color: #000000;
+      }
+
+      input,
+      textarea {
+        border: none;
+        border-radius: 8px;
+        padding: 12px 14px;
+        font-size: 16px;
+        color: #000000;
+      }
+
+      textarea {
+        resize: none;
+        height: 140px;
+      }
+
+      .submit-btn {
+        align-self: center;
+        width: 150px;
+        padding: 10px 0;
+        border: none;
+        border-radius: 20px;
+        font-size: 18px;
+        font-weight: 600;
+        color: white;
+        cursor: pointer;
+        margin-top: 12px;
+        background: linear-gradient(90deg, #5d55ff, #867bff);
+        transition: transform 0.2s ease;
+      }
+
+      .submit-btn:hover {
+        transform: scale(1.05);
+      }
+
+      .contact-image {
+        width: 50%;
+        height: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: -30px;
+        margin-bottom: -200px;
+      }
+
+      .contact-image img {
+        width: 100%;
+        border-radius: 24px;
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <div class="logo">
+        <img src="assets/obliqnew.png" alt="Logo" />
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="about-us.html">About us</a></li>
+        <li><a href="events.html">Meetups</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+
+      <button class="contact-btn active" onclick="window.location.href='contact-us.html'">Contact us</button>
+    </nav>
+
+    <div class="contact-section">
+      <div class="contact-form">
+        <h3>Get in Touch!</h3>
+        <h1>Let’s Chat, Reach Out to Us</h1>
+        <p>
+          Have any questions or feedback? We’re here to help. Send us a message,
+          and we’ll respond within 24 hours.
+        </p>
+        <div class="divider"></div>
+
+        <form>
+          <div class="input-group">
+            <div class="field">
+              <label>First Name</label>
+              <input type="text" placeholder="John" />
+            </div>
+            <div class="field">
+              <label>Last Name</label>
+              <input type="text" placeholder="Doe" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Email Address</label>
+            <input type="email" placeholder="example@gmail.com" />
+          </div>
+
+          <div class="field">
+            <label>Message</label>
+            <textarea placeholder="Type your message here..."></textarea>
+          </div>
+
+          <button class="submit-btn">Send</button>
+        </form>
+      </div>
+
+      <div class="contact-image">
+        <img src="assets/Group 1597880783.png" alt="Contact visual" />
+      </div>
+    </div>
+  </body>
+</html>

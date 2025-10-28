@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBLIQ | Elite Finance Forum</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loadingScreen" class="loading-screen">
+        <div class="loading-content">
+            <h1 class="loading-logo">OBLIQ</h1>
+            <div class="loading-bar"></div>
+            <p class="loading-text">Initializing AI Encryption...</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-section">
+                <span class="logo-text">OBLIQ</span>
+                <span class="logo-tag">/ ALPHA ONLY</span>
+            </div>
+            <div class="nav-center">
+                <div class="market-stats">
+                    <span class="stat-item positive">BTC: $67,420 📈</span>
+                    <span class="stat-item positive">ETH: $4,206 🚀</span>
+                    <span class="stat-item negative">FEAR: EXTREME 📊</span>
+                </div>
+            </div>
+            <div class="nav-right">
+                <div class="user-stats">
+                    <span class="stat-label">Portfolio</span>
+                    <span class="stat-value positive">+47.3%</span>
+                </div>
+                <button class="secret-indicator" id="secretStatus">
+                    <span class="lock-icon">🔒</span>
+                    <span id="secretText">NORMIE MODE</span>
+                    <span class="indicator-dot"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="forum-container">
+        <!-- Header Section -->
+        <div class="forum-header">
+            <div class="header-bg"></div>
+            <h1 class="glitch" data-text="WALL STREET WHISPERS">WALL STREET WHISPERS</h1>
+            <p class="subtitle">Where alpha is born and paper hands die</p>
+            <div class="header-stats">
+                <div class="stat-card">
+                    <span class="stat-number">24.7K</span>
+                    <span class="stat-desc">Diamond Hands</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">1.2M</span>
+                    <span class="stat-desc">Alpha Drops</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">$4.2B</span>
+                    <span class="stat-desc">Gains Captured</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Create Post Section -->
+        <div class="create-post-section">
+            <div class="post-creator">
+                <div class="creator-header">
+                    <img src="https://api.dicebear.com/7.x/identicon/svg?seed=alpha" alt="Avatar" class="user-avatar">
+                    <div class="creator-info">
+                        <span class="creator-name">Drop Your Alpha</span>
+                        <span class="creator-tag">NFA - Not Financial Advice</span>
+                    </div>
+                </div>
+                <input type="text" id="postTitle" placeholder="Title your insider knowledge..." class="post-title-input" maxlength="100">
+                <div class="input-counter">
+                    <span id="titleCounter">0/100</span>
+                </div>
+                <textarea id="postContent" placeholder="Share the alpha... (This better not be financial advice)" class="post-content-input" maxlength="500"></textarea>
+                <div class="input-counter">
+                    <span id="contentCounter">0/500</span>
+                </div>
+                <div class="post-actions">
+                    <div class="action-left">
+                        <button class="action-icon" title="Add Chart">📊</button>
+                        <button class="action-icon" title="Add Position">💰</button>
+                        <button class="action-icon" title="Add Rocket">🚀</button>
+                    </div>
+                    <div class="action-right">
+                        <button class="btn-secondary" id="previewBtn">
+                            <span>👁️ Preview</span>
+                        </button>
+                        <button class="btn-encrypt" id="encryptBtn">
+                            <span class="encrypt-icon">🔐</span>
+                            <span>AI ENCRYPT</span>
+                        </button>
+                        <button class="btn-primary" id="postBtn">
+                            <span class="btn-text">POST</span>
+                            <span class="btn-subtext">TO THE MOON 🚀</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="filter-section">
+            <div class="filter-tabs">
+                <button class="tab active" data-filter="hot">🔥 HOT</button>
+                <button class="tab" data-filter="new">✨ NEW</button>
+                <button class="tab" data-filter="gains">💰 TOP GAINS</button>
+                <button class="tab" data-filter="encrypted">🔐 ENCRYPTED</button>
+                <button class="tab" data-filter="dd">📈 DD ONLY</button>
+            </div>
+            <div class="filter-options">
+                <select class="time-filter" id="timeFilter">
+                    <option value="today">Today</option>
+                    <option value="week">This Week</option>
+                    <option value="month">This Month</option>
+                    <option value="all">All Time</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Posts Container -->
+        <div class="posts-container" id="postsContainer">
+            <!-- Posts will be dynamically loaded here -->
+        </div>
+
+        <!-- Load More -->
+        <div class="load-more-container">
+            <button class="btn-load-more" id="loadMoreBtn">
+                <span>Load More Alpha</span>
+                <span class="arrow">↓</span>
+            </button>
+        </div>
+    </main>
+
+    <!-- Floating Elements -->
+    <div class="floating-ticker">
+        <div class="ticker-content" id="tickerContent">
+            <span>📈 SPY: $452.30 (+1.2%)</span>
+            <span>🚀 TSLA: $238.45 (+5.7%)</span>
+            <span>💎 GME: $420.69 (+69%)</span>
+            <span>🌙 DOGE: $0.42 (+420%)</span>
+            <span>📊 VIX: 15.23 (-8.3%)</span>
+            <span>💰 Gold: $2,042 (+0.8%)</span>
+            <span>⚡ Oil: $78.32 (+2.1%)</span>
+            <span>🔥 NVDA: $892.15 (+3.2%)</span>
+        </div>
+    </div>
+
+    <!-- Notification Container -->
+    <div id="notificationContainer" class="notification-container"></div>
+
+    <!-- Modal for Preview -->
+    <div id="previewModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Preview Your Alpha</h3>
+                <button class="modal-close" id="closeModal">×</button>
+            </div>
+            <div class="modal-body" id="previewContent">
+                <!-- Preview content will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="forum.js"></script>
+</body>
+</html>

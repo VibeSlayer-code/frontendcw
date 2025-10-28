@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Obliq - Meetups</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Inter", sans-serif;
+      }
+
+      body {
+        background: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-x: hidden;
+      }
+
+      nav {
+        width: 92%;
+        max-width: 1280px;
+        background-color: #ffffff;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 40px;
+        margin-top: 20px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      }
+
+      .logo {
+        font-size: 28px;
+        font-weight: 700;
+        color: #6c63ff;
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 40px;
+        flex: 1;
+        justify-content: center;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: #000;
+        font-size: 16px;
+        font-weight: 500;
+        transition: color 0.2s;
+      }
+
+      .nav-links a:hover {
+        color: #6c63ff;
+      }
+
+      .nav-links a.active {
+        color: #6c63ff;
+      }
+
+      .contact-btn {
+        border: none;
+        background: #6c63ff;
+        color: white;
+        padding: 10px 24px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 600;
+        transition: all 0.2s ease;
+      }
+
+      .contact-btn:hover {
+        background: #5a52d5;
+        transform: translateY(-2px);
+      }
+
+      .events-section {
+        width: 92%;
+        max-width: 1280px;
+        margin-top: -40px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 40px 0 100px 0;
+      }
+
+      .events-section h1 {
+        font-size: 52px;
+        font-weight: 700;
+        color: #6c63ff;
+        margin-bottom: 40px;
+      }
+
+      .events-grid {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+        gap: 50px;
+      }
+
+      .event-card {
+        border-radius: 12px;
+        overflow: hidden;
+        background: #ffffff;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .event-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      .event-card img {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+      }
+
+      .event-info {
+        padding: 20px 24px;
+        color: #000000;
+        font-size: 25px;
+        line-height: 1.5;
+        flex-grow: 1;
+      }
+
+      .event-info b {
+        font-weight: 500;
+      }
+
+      .event-info span {
+        color: #3b43f1;
+        font-weight: 600;
+      }
+
+      .get-details-btn {
+        align-self: center;
+        margin: 20px 0 25px 0;
+        width: 80%;
+        height: 48px;
+        background-color: #635bff;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        font-size: 18px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+
+      .get-details-btn:hover {
+        background-color: #5147ff;
+        transform: scale(1.03);
+      }
+
+      @media (max-width: 600px) {
+        .nav-links a {
+          font-size: 18px;
+        }
+
+        .contact-btn {
+          width: auto;
+          font-size: 16px;
+          padding: 8px 12px;
+          height: auto;
+          margin-right: 0;
+        }
+
+        .logo img {
+          width: 48px;
+          margin-left: 0;
+          margin-bottom: 0;
+        }
+
+        .events-section h1 {
+          font-size: 36px;
+          text-align: center;
+        }
+
+        .event-card {
+          height: auto;
+        }
+
+        .event-card img {
+          height: 200px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <div class="logo">OBLIQ</div>
+
+      <ul class="nav-links">
+        <li><a href="homepage.html">Home</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="events.html" class="active">Meetups</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+
+      <button class="contact-btn" onclick="window.location.href='contact-us.html'">
+        Contact us
+      </button>
+    </nav>
+
+    <div class="events-section">
+      <h1>Upcoming Events</h1>
+
+      <div class="events-grid">
+        <div class="event-card">
+          <img src="assets/pexels-asifmethar-789750 1.png" alt="Delhi" />
+          <div class="event-info">
+            <p>
+              Venue:
+              <b>Connaught Place, <span>Delhi</span></b>
+            </p>
+            <p>Date: 12.11.2025</p>
+            <p>Timings: <span>8:30 PM onwards</span></p>
+          </div>
+          <button class="get-details-btn">Get details</button>
+        </div>
+
+        <div class="event-card">
+          <img src="assets/pexels-sidhaya-2445545 1.png" alt="Mumbai" />
+          <div class="event-info">
+            <p>
+              Venue: <b>Bandra Kurla Complex, <span>Mumbai</span></b>
+            </p>
+            <p>Date: 16.11.2025</p>
+            <p>Timings: <span>6:00 PM onwards</span></p>
+          </div>
+          <button class="get-details-btn">Get details</button>
+        </div>
+
+        <div class="event-card">
+          <img src="assets/pexels-ajay-donga-1113836-2174656 1.png" alt="Goa" />
+          <div class="event-info">
+            <p>
+              Venue: <b>Anjuna Beach, <span>Goa</span></b>
+            </p>
+            <p>Date: 21.11.2025</p>
+            <p>Timings: <span>5:20 PM onwards</span></p>
+          </div>
+          <button class="get-details-btn">Get details</button>
+        </div>
+
+        <div class="event-card">
+          <img
+            src="assets/pexels-ananya-mandial-931631-33070317 1.png"
+            alt="Chandigarh"
+          />
+          <div class="event-info">
+            <p>
+              Venue: <b>Sector 17 Plaza, <span>Chandigarh</span></b>
+            </p>
+            <p>Date: 25.11.2025</p>
+            <p>Timings: <span>6:00 AM onwards</span></p>
+          </div>
+          <button class="get-details-btn">Get details</button>
+        </div>
+
+        <div class="event-card">
+          <img
+            src="assets/pexels-axp-photography-500641970-19149587 1.png"
+            alt="Rajasthan"
+          />
+          <div class="event-info">
+            <p>
+              Venue: <b>Jaipur, <span>Rajasthan</span></b>
+            </p>
+            <p>Date: 26.11.2025</p>
+            <p>Timings: <span>4:20 PM onwards</span></p>
+          </div>
+          <button class="get-details-btn">Get details</button>
+        </div>
+
+        <div class="event-card">
+          <img src="assets/pexels-alby-10989121 1.png" alt="Bangalore" />
+          <div class="event-info">
+            <p>
+              Venue: <b>Banjara Hills, <span>Bangalore</span></b>
+            </p>
+            <p>Date: 28.11.2025</p>
+            <p>Timings: <span>8:00 PM onwards</span></p>
+          </div>
+          <button class="get-details-btn">Get details</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

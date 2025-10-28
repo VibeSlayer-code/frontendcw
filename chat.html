@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBLIQ | Elite Finance Forum</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">OBLIQ</span>
+                <span class="logo-tag">/ ALPHA ONLY</span>
+            </div>
+            <div class="nav-right">
+                <div class="user-stats">
+                    <span class="stat-item">📈 +47.3%</span>
+                    <span class="stat-item">💎 DIAMOND HANDS</span>
+                </div>
+                <button class="secret-indicator" id="secretStatus">
+                    <span class="lock-icon">🔒</span>
+                    <span id="secretText">NORMIE MODE</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="forum-container">
+        <div class="forum-header">
+            <h1 class="glitch" data-text="WALL STREET WHISPERS">WALL STREET WHISPERS</h1>
+            <p class="subtitle">Where alpha is born and paper hands die</p>
+        </div>
+
+        <div class="create-post-section">
+            <div class="post-creator">
+                <input type="text" id="postTitle" placeholder="Drop your alpha..." class="post-title-input">
+                <textarea id="postContent" placeholder="Share the insider knowledge... (NFA)" class="post-content-input"></textarea>
+                <div class="post-actions">
+                    <button class="btn-primary" id="postBtn">
+                        <span class="btn-text">POST</span>
+                        <span class="btn-subtext">TO THE MOON 🚀</span>
+                    </button>
+                    <button class="btn-encrypt" id="encryptBtn">
+                        <span class="encrypt-icon">🔐</span>
+                        <span>ENCRYPT</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="filter-tabs">
+            <button class="tab active" data-filter="hot">🔥 HOT</button>
+            <button class="tab" data-filter="new">✨ NEW</button>
+            <button class="tab" data-filter="gains">💰 TOP GAINS</button>
+            <button class="tab" data-filter="encrypted">🔐 ENCRYPTED</button>
+        </div>
+
+        <div class="posts-container" id="postsContainer">
+            <!-- Posts will be dynamically loaded here -->
+        </div>
+    </main>
+
+    <div class="floating-ticker">
+        <div class="ticker-content">
+            <span>BTC: $67,420 📈</span>
+            <span>ETH: $4,206.90 🚀</span>
+            <span>GME: $420.69 💎</span>
+            <span>FEAR & GREED: EXTREME GREED 📊</span>
+        </div>
+    </div>
+
+    <script src="forum.js"></script>
+</body>
+</html>
